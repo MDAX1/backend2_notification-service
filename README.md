@@ -40,7 +40,7 @@ körs inte här, så anrop till `POST /api/notifications` svarar 503 tills den f
 bygger den här tjänsten från en syskonklon:
 
 ```bash
-cd ../backend2_customer-service && docker compose up --build
+cd ../Backend2_customer-service && docker compose up --build
 ```
 
 `JWT_SECRET` måste vara identisk i alla tre tjänsterna, annars underkänns varandras tokens.
@@ -66,7 +66,7 @@ docker run --rm -p 5434:5432 \
 JAVA_HOME=$(/usr/libexec/java_home -v 21) ./mvnw test
 ```
 
-18 tester. Postgres startas av Testcontainers, så Docker måste vara igång.
+18 tester. De kör mot en H2-databas i minnet, så Docker behövs inte för testkörningen.
 
 `NotificationControllerIntegrationTest` gör riktiga HTTP-anrop genom hela kedjan: säkerhetsfilter,
 controller, service, repository och databas. Bara kundtjänsten byts ut, och det sker på
