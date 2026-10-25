@@ -34,3 +34,8 @@ build/
 
 ### Local secrets ###
 .env
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
