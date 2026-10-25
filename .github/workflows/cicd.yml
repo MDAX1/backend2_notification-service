@@ -37,4 +37,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: DITT_DOCKERHUB_ANVÄNDARNAMN/pansionat-notification-service:latest
+          tags: mdx101001/pansionat-notification-service:latest
